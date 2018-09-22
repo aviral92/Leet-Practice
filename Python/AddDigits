@@ -1,0 +1,22 @@
+#Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+def addDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        n=num
+        m=0
+        
+        while(n !=0):
+            m=m+(n%10)
+            n=int(n/10)
+            
+        while(m>9):
+            n=m
+            m=0
+            while(n !=0):
+                m=m+(n%10)
+                n=int(n/10)
+        
+        return m
+        
